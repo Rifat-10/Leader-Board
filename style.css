@@ -195,6 +195,10 @@ hr{
     display: flex;
     align-items: center;
 }
+
+.star,p{
+    margin-right: 11px;
+}
 .star-yellow{
     color: #FFC014;
 }
@@ -207,4 +211,42 @@ hr{
     color:#FF4A60;
     background-color:  #FFE4E8;
     border-radius: 14.6913px;
+}
+
+
+/* ---------------------
+    Media Queries 
+-----------------------*/
+
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .course{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog, .course{
+        flex-direction: column;
+    }
+}
+
+/* tablet devices */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .course{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+   .blog, .course{
+        flex-direction: column;
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
